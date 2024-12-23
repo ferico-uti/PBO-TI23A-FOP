@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array / Larik</title>
+  </head>
+  <body>
+    <!-- buat internal js -->
+    <script>
+      // definisi array
+      //   let mahasiswa =
+      //   ["Iwan", "Budi", "Andi", "Wati", "Ida"];
+
+      let mahasiswa = [
+        ["001", "Iwan", "IF"],
+        ["002", "Budi", "TI"],
+        ["003", "Wati", "SI"],
+        ["004", "Andi", "TK"],
+        ["005", "Ida", "TI"],
+      ];
+      // akses array "mahasiswa"
+      document.write(`Mahasiswa ke - 2 : ${mahasiswa[3][2]}`);
+      document.write("<br>");
+
+      // tambah array
+      mahasiswa.push(["006", "Udin", "SI"]);
+      document.write(`Mahasiswa ke-6 : ${mahasiswa[5][1]}`);
+      document.write("<br>");
+
+      // hapus array (delete)
+      // mahasiswa.delete[2];
+
+      // hapus array (shift >> dari depan)
+      // mahasiswa.shift();
+
+      // hapus array (pop >> dari belakang)
+      mahasiswa.pop();
+      document.write(`Mahasiswa ke-5 : ${mahasiswa[5]}`);
+    </script>
+  </body>
+</html>

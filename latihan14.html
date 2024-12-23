@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function (Internal)</title>
+  </head>
+  <body>
+    <!-- buat text -->
+    <div style="margin-bottom: 10px">
+      <input type="text" name="" id="txt_input1" />
+      <label for="" id="lbl_input1">0</label>
+    </div>
+
+    <div>
+      <input type="text" name="" id="txt_input2" />
+      <label for="" id="lbl_input2">0</label>
+    </div>
+
+    <!-- internal js -->
+    <script>
+      // buat variabel
+      let txt_input1, txt_input2;
+      let lbl_input1, lbl_input2;
+      let jumlah_input1, jumlah_input2;
+      // definisi variabel
+      txt_input1 = document.querySelector("#txt_input1");
+      txt_input2 = document.querySelector("#txt_input2");
+      lbl_input1 = document.querySelector("#lbl_input1");
+      lbl_input2 = document.querySelector("#lbl_input2");
+      jumlah_input1 = 0;
+      jumlah_input2 = 0;
+
+      // buat fungsi (standard)
+      // txt, jml, lbl (parameter formal)
+      function getCounter(txt,jml,lbl)
+      {
+        // hitung jumlah karakter yang diisi
+        jml = txt.value.length;
+        // tampilkan hasil di label
+        lbl.innerHTML = jml;        
+      }
+
+      // buat event
+      txt_input1.addEventListener("keyup", function() {
+        // txt_input1, jumlah_input1, lbl_input1 (parameter aktual)
+        getCounter(txt_input1, jumlah_input1, lbl_input1)
+      });
+
+      txt_input2.addEventListener("keyup", function() {
+        getCounter(txt_input2, jumlah_input2, lbl_input2)
+      });
+
+      
+    </script>
+  </body>
+</html>
